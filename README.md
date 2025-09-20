@@ -222,11 +222,12 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 - El servidor de configuración centralizada (`config-server`) puede gestionar configuraciones externas.
 - Variables sensibles (DB, JWT, etc.) deben configurarse como variables de entorno o en archivos seguros.
 
-## Ejecución
+## Orden para levantar los microservicios
 
-Puedes ejecutar cada microservicio individualmente:
+Para evitar problemas de dependencias y asegurar el correcto funcionamiento del sistema, se recomienda iniciar los microservicios en el siguiente orden:
 
-```bash
-cd service-user
-mvn spring-boot:run
-```
+1. **Config Server** (`microservice-configserver`)
+2. **Eureka Server** (`microservice-eureka`)
+3. **Student Service** (`microservice-student`)
+4. **Course Service** (`microservice-course`)
+5. **Gateway** (`microservice-gateway`)
