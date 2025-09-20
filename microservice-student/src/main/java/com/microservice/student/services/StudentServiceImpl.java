@@ -33,7 +33,7 @@ public class StudentServiceImpl implements IStudentService{
     @Override
     public List<Student> findByIdCourse(Long courseId) {
         
-        return studentRepository.findByIdCourse(courseId);
+        return studentRepository.findByIdCourse(courseId);//okl
     }
 
     @Override

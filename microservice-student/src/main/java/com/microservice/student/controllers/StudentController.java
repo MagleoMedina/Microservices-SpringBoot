@@ -33,13 +33,17 @@ public class StudentController {
         return ResponseEntity.ok(studentService.findById(id));
     }
     @PostMapping("/save")
-    
     public ResponseEntity<?> saveStudent(@RequestBody Student s){
         
         studentService.saveStudent(s);
         URI location = studentService.createUri(s, "/{id}");
         return (ResponseEntity<?>) ResponseEntity.created(location).build();
 
+    }
+    @GetMapping("/search-by-id/{idCourse}")
+    public ResponseEntity<?> findByIdCourse(@PathVariable Long idCourse){
+
+        return ResponseEntity.ok(studentService.findByIdCourse(idCourse));
     }
 
 }

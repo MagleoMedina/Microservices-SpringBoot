@@ -10,9 +10,9 @@ import com.microservice.student.models.Student;
 @Repository                                              //Tabla    PK
 public interface StudentRepository extends CrudRepository<Student, Long> {
 
-    @Query("SELECT s FROM Student s WHERE s.courseId = : courseId")
+    @Query("SELECT s FROM Student s WHERE s.courseId = :courseId")//no dejar espacios pero en fa
     List<Student> findByIdCourse(Long courseId);    
 
-    //List<Student> findAllByCourseId(Long courseId);
+    //List<Student> findByIdCourse(Long courseId);
 
 }

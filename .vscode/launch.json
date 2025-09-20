@@ -31,6 +31,16 @@
             "projectName": "microservice-gateway",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroserviceCourseApplication<microservice-course>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.microservice.course.MicroserviceCourseApplication",
+            "projectName": "microservice-course",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
