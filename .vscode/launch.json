@@ -30,7 +30,8 @@
             "mainClass": "com.microservice.gateway.MicroserviceGatewayApplication",
             "projectName": "microservice-gateway",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=43281 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=microservice-gateway"
         },
         {
             "type": "java",
@@ -39,6 +40,17 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.microservice.course.MicroserviceCourseApplication",
             "projectName": "microservice-course",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=43569 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=microservice-course"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroserviceConfigserverApplication<microservice-configserver>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.microservice.configserver.MicroserviceConfigserverApplication",
+            "projectName": "microservice-configserver",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
