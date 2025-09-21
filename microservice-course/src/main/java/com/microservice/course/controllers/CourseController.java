@@ -25,23 +25,39 @@ public class CourseController {
 
     @GetMapping
     public ResponseEntity<?> getAllCourses() {
-        return ResponseEntity.ok(courseService.getAllCourses());
+        try {
+            return ResponseEntity.ok(courseService.getAllCourses());
+        } catch (Exception e) {
+            return ResponseEntity.status(404).body(e.getMessage());
+        }
     }
 
     @PostMapping
     public ResponseEntity<?> createCourse(@RequestBody Course course) {
-        URI location = courseService.createUri(course, "/{id}");
-        return (ResponseEntity<?>) ResponseEntity.created(location).build();
+        try {
+            URI location = courseService.createUri(course, "/{id}");
+            return (ResponseEntity<?>) ResponseEntity.created(location).build();
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getCourseById(@PathVariable Long id) {
-        return ResponseEntity.ok(courseService.getCourseById(id));
+        try {
+            return ResponseEntity.ok(courseService.getCourseById(id));
+        } catch (Exception e) {
+            return ResponseEntity.status(404).body(e.getMessage());
+        }
     }
 
     @GetMapping("/search-students/{courseId}")
     public ResponseEntity<?> getStudentsByCourseId(@PathVariable Long courseId) {
-        return ResponseEntity.ok(courseService.getStudentsByCourseId(courseId));
+        try {
+            return ResponseEntity.ok(courseService.getStudentsByCourseId(courseId));
+        } catch (Exception e) {
+            return ResponseEntity.status(404).body(e.getMessage());
+        }
     }
 
 }
