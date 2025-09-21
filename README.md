@@ -211,15 +211,14 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
    cd SpringMicroServices
    ```
 
-2. Compila los microservicios:
+2. Compila cada uno de los microservicios:
    ```bash
-   mvn clean install
+   mvn clean compile
    ```
 
 ## Configuración
 
-- Las configuraciones de cada microservicio están en `src/main/resources/application.yml`.
-- El servidor de configuración centralizada (`config-server`) puede gestionar configuraciones externas.
+- El servidor de configuración centralizada (`config-server`) puede gestionar configuraciones externas e internas de los demas microservicios.
 - Variables sensibles (DB, JWT, etc.) deben configurarse como variables de entorno o en archivos seguros.
 
 ## Orden para levantar los microservicios
