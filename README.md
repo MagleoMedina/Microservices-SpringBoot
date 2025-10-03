@@ -7,7 +7,6 @@ Este proyecto es una colección de microservicios desarrollados con Spring Boot,
 El objetivo de este proyecto es mostrar cómo construir y desplegar microservicios con Spring Boot. Cada microservicio puede gestionar una parte específica de la aplicación, como estudiantes y sus cursos. El proyecto puede incluir comunicación entre servicios, descubrimiento de servicios, balanceo de carga, y manejo de fallos.
 
 ## Estructura del Proyecto
-
 ```
 ├── 📁 .git/ 🚫 (auto-hidden)
 ├── 📁 .mvn/
@@ -43,7 +42,6 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 │   ├── 📁 target/ 🚫 (auto-hidden)
 │   ├── 📄 .gitattributes
 │   ├── 🚫 .gitignore
-│   ├── 📝 HELP.md
 │   ├── 📄 mvnw
 │   ├── 🐚 mvnw.cmd
 │   └── 📄 pom.xml
@@ -64,7 +62,6 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 │   │   │   │               ├── 📁 dto/
 │   │   │   │               │   └── ☕ StudentDTO.java
 │   │   │   │               ├── 📁 http/
-│   │   │   │               │   ├── 📁 request/
 │   │   │   │               │   └── 📁 response/
 │   │   │   │               │       └── ☕ StudentByIdCourseResponse.java
 │   │   │   │               ├── 📁 models/
@@ -76,8 +73,6 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 │   │   │   │               │   └── ☕ ICourseService.java
 │   │   │   │               └── ☕ MicroserviceCourseApplication.java
 │   │   │   └── 📁 resources/
-│   │   │       ├── 📁 static/
-│   │   │       ├── 📁 templates/
 │   │   │       ├── ⚙️ application.yml
 │   │   │       ├── 📄 banner.txt
 │   │   │       ├── 🗄️ import.sql
@@ -91,7 +86,6 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 │   ├── 📁 target/ 🚫 (auto-hidden)
 │   ├── 📄 .gitattributes
 │   ├── 🚫 .gitignore
-│   ├── 📝 HELP.md
 │   ├── 📄 mvnw
 │   ├── 🐚 mvnw.cmd
 │   └── 📄 pom.xml
@@ -119,35 +113,49 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 │   ├── 📁 target/ 🚫 (auto-hidden)
 │   ├── 📄 .gitattributes
 │   ├── 🚫 .gitignore
-│   ├── 📝 HELP.md
 │   ├── 📄 mvnw
 │   ├── 🐚 mvnw.cmd
 │   └── 📄 pom.xml
 ├── 📁 microservice-gateway/
 │   ├── 📁 .mvn/
 │   │   └── 📁 wrapper/
+│   │       ├── ☕ maven-wrapper.jar
 │   │       └── 📄 maven-wrapper.properties
 │   ├── 📁 src/
 │   │   ├── 📁 main/
 │   │   │   ├── 📁 java/
 │   │   │   │   └── 📁 com/
-│   │   │   │       └── 📁 microservice/
-│   │   │   │           └── 📁 gateway/
-│   │   │   │               └── ☕ MicroserviceGatewayApplication.java
+│   │   │   │       └── 📁 irojas/
+│   │   │   │           └── 📁 demojwt/
+│   │   │   │               ├── 📁 Auth/
+│   │   │   │               │   ├── ☕ AuthController.java
+│   │   │   │               │   ├── ☕ AuthResponse.java
+│   │   │   │               │   ├── ☕ AuthService.java
+│   │   │   │               │   ├── ☕ LoginRequest.java
+│   │   │   │               │   └── ☕ RegisterRequest.java
+│   │   │   │               ├── 📁 Config/
+│   │   │   │               │   ├── ☕ ApplicationConfig.java
+│   │   │   │               │   └── ☕ SecurityConfig.java
+│   │   │   │               ├── 📁 Demo/
+│   │   │   │               │   └── ☕ DemoController.java
+│   │   │   │               ├── 📁 Jwt/
+│   │   │   │               │   ├── ☕ JwtAuthenticationFilter.java
+│   │   │   │               │   └── ☕ JwtService.java
+│   │   │   │               ├── 📁 User/
+│   │   │   │               │   ├── ☕ Role.java
+│   │   │   │               │   ├── ☕ User.java
+│   │   │   │               │   └── ☕ UserRepository.java
+│   │   │   │               └── ☕ DemoJwtApplication.java
 │   │   │   └── 📁 resources/
-│   │   │       ├── ⚙️ application.yml
-│   │   │       ├── 📄 banner.txt
-│   │   │       └── 📄 logback-spring.xml
+│   │   │       └── ⚙️ application.yml
 │   │   └── 📁 test/
 │   │       └── 📁 java/
 │   │           └── 📁 com/
-│   │               └── 📁 microservice/
-│   │                   └── 📁 gateway/
-│   │                       └── ☕ MicroserviceGatewayApplicationTests.java
+│   │               └── 📁 irojas/
+│   │                   └── 📁 demojwt/
+│   │                       └── ☕ DemoJwtApplicationTests.java
 │   ├── 📁 target/ 🚫 (auto-hidden)
-│   ├── 📄 .gitattributes
 │   ├── 🚫 .gitignore
-│   ├── 📝 HELP.md
 │   ├── 📄 mvnw
 │   ├── 🐚 mvnw.cmd
 │   └── 📄 pom.xml
@@ -172,8 +180,6 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 │   │   │   │               │   └── ☕ StudentServiceImpl.java
 │   │   │   │               └── ☕ MicroserviceStudentApplication.java
 │   │   │   └── 📁 resources/
-│   │   │       ├── 📁 static/
-│   │   │       ├── 📁 templates/
 │   │   │       ├── ⚙️ application.yml
 │   │   │       ├── 📄 banner.txt
 │   │   │       ├── 🗄️ import.sql
@@ -187,11 +193,9 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 │   ├── 📁 target/ 🚫 (auto-hidden)
 │   ├── 📄 .gitattributes
 │   ├── 🚫 .gitignore
-│   ├── 📝 HELP.md
 │   ├── 📄 mvnw
 │   ├── 🐚 mvnw.cmd
 │   └── 📄 pom.xml
-├── 📁 target/ 🚫 (auto-hidden)
 ├── 📖 README.md
 └── 📄 pom.xml
 ```
