@@ -52,6 +52,27 @@
             "mainClass": "com.microservice.configserver.MicroserviceConfigserverApplication",
             "projectName": "microservice-configserver",
             "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=44845 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=microservice-configserver"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoJwtApplication<microservice-gateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.irojas.demojwt.DemoJwtApplication",
+            "projectName": "microservice-gateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoJwtApplication<demo-jwt>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.irojas.demojwt.DemoJwtApplication",
+            "projectName": "demo-jwt",
+            "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
     ]

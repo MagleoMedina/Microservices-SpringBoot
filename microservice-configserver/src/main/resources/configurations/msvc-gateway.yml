@@ -1,23 +1,33 @@
 server:
   port: 8080
-
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    url: jdbc:mysql://localhost:3306/studentDb
+    username: root
+    password: root1234
   application:
-    name: msvc
+    name: msvc-gateway
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: students
-          uri: 'http://localhost:8090'
-          predicates:
+      server:
+        webmvc:
+          routes:
+          - id: students
+            uri: 'http://localhost:8090'
+            predicates:
             - Path=/api/students/**
-        - id: courses
-          uri: 'http://localhost:9090'
-          predicates:
-            - Path=/api/courses/**
+          - id: courses
+            uri: 'http://localhost:9090'
+            predicates:
+            - Path=/api/courses/**    
+    discovery:
+      enabled: true
+
+ 
 eureka:
   client:
     register-with-eureka: false
