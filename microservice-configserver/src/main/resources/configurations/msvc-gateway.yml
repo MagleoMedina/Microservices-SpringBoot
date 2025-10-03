@@ -18,6 +18,14 @@ spring:
           uri: 'http://localhost:9090'
           predicates:
             - Path=/api/courses/**
+        - id: auth
+          uri: 'http://localhost:7070'
+          predicates:
+            - Path=/auth/**
+        - id: auth2
+          uri: 'http://localhost:7070'
+          predicates:
+            - Path=/api/**
 eureka:
   client:
     register-with-eureka: false

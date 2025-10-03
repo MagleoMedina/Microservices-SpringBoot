@@ -53,6 +53,16 @@
             "projectName": "microservice-configserver",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoJwtApplication<demo-jwt>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.irojas.demojwt.DemoJwtApplication",
+            "projectName": "demo-jwt",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
