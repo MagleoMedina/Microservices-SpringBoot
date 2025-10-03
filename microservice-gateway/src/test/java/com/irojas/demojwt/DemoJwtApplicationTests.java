@@ -1,10 +1,10 @@
-package com.microservice.gateway;
+package com.irojas.demojwt;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MicroserviceGatewayApplicationTests {
+class DemoJwtApplicationTests {
 
 	@Test
 	void contextLoads() {

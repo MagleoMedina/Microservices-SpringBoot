@@ -1,14 +1,13 @@
-package com.microservice.gateway;
+package com.irojas.demojwt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-public class MicroserviceGatewayApplication {
+public class DemoJwtApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroserviceGatewayApplication.class, args);
+		SpringApplication.run(DemoJwtApplication.class, args);
 	}
 
 }

@@ -1,19 +1,26 @@
 server:
   port: 8080
-
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    url: jdbc:mysql://localhost:3306/studentDb
+    username: root
+    password: root1234
   application:
-    name: msvc
+    name: msvc-gateway
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: students
-          uri: 'http://localhost:8090'
-          predicates:
+      server:
+        webmvc:
+          routes:
+          - id: students
+            uri: 'http://localhost:8090'
+            predicates:
             - Path=/api/students/**
+<<<<<<< Updated upstream
         - id: courses
           uri: 'http://localhost:9090'
           predicates:
@@ -26,6 +33,13 @@ spring:
           uri: 'http://localhost:7070'
           predicates:
             - Path=/api/**
+=======
+          - id: courses
+            uri: 'http://localhost:9090'
+            predicates:
+            - Path=/api/courses/**         
+ 
+>>>>>>> Stashed changes
 eureka:
   client:
     register-with-eureka: false
