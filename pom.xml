@@ -23,7 +23,6 @@
     <module>microservice-configserver</module>
     <module>microservice-student</module>
     <module>microservice-course</module>
-    <module>demo-jwt</module>
   </modules>
   
   <properties>

@@ -20,26 +20,14 @@ spring:
             uri: 'http://localhost:8090'
             predicates:
             - Path=/api/students/**
-<<<<<<< Updated upstream
-        - id: courses
-          uri: 'http://localhost:9090'
-          predicates:
-            - Path=/api/courses/**
-        - id: auth
-          uri: 'http://localhost:7070'
-          predicates:
-            - Path=/auth/**
-        - id: auth2
-          uri: 'http://localhost:7070'
-          predicates:
-            - Path=/api/**
-=======
           - id: courses
             uri: 'http://localhost:9090'
             predicates:
-            - Path=/api/courses/**         
+            - Path=/api/courses/**    
+    discovery:
+      enabled: true
+
  
->>>>>>> Stashed changes
 eureka:
   client:
     register-with-eureka: false
