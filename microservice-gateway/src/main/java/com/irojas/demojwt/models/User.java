@@ -1,4 +1,4 @@
-package com.irojas.demojwt.User;
+package com.irojas.demojwt.models;
 
 import java.util.Collection;
 import java.util.List;

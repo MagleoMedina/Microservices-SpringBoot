@@ -27,7 +27,7 @@ public class StudentController {
         try {
             return ResponseEntity.ok().body(studentService.findAllStudents());
         } catch (Exception e) {
-            return ResponseEntity.status(404).body(e.getMessage());
+            return ResponseEntity.status(500).body(e.getMessage());
         }
     }
 

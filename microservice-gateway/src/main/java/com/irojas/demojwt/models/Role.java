@@ -1,4 +1,4 @@
-package com.irojas.demojwt.User;
+package com.irojas.demojwt.models;
 
 public enum Role {
     ADMIN,

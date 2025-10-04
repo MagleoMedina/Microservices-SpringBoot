@@ -1,4 +1,4 @@
-package com.irojas.demojwt.Jwt;
+package com.irojas.demojwt.services;
 
 import java.security.Key;
 import java.util.Date;
@@ -16,10 +16,12 @@ import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 
 @Service
-public class JwtService {
+public class JwtService implements IJwtService {
 
+    //Puede ser modificada para mayor seguridad
     private static final String SECRET_KEY="586E3272357538782F413F4428472B4B6250655368566B597033733676397924";
 
+    @Override
     public String getToken(UserDetails user) {
         return getToken(new HashMap<>(), user);
     }
@@ -40,10 +42,12 @@ public class JwtService {
        return Keys.hmacShaKeyFor(keyBytes);
     }
 
+    @Override
     public String getUsernameFromToken(String token) {
         return getClaim(token, Claims::getSubject);
     }
 
+    @Override
     public boolean isTokenValid(String token, UserDetails userDetails) {
         final String username=getUsernameFromToken(token);
         return (username.equals(userDetails.getUsername())&& !isTokenExpired(token));
@@ -59,6 +63,7 @@ public class JwtService {
             .getBody();
     }
 
+    @Override
     public <T> T getClaim(String token, Function<Claims,T> claimsResolver)
     {
         final Claims claims=getAllClaims(token);
