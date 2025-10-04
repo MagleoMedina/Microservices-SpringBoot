@@ -127,26 +127,6 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 │   │   │   │   └── 📁 com/
 │   │   │   │       └── 📁 irojas/
 │   │   │   │           └── 📁 demojwt/
-<<<<<<< Updated upstream
-│   │   │   │               ├── 📁 Auth/
-│   │   │   │               │   ├── ☕ AuthController.java
-│   │   │   │               │   ├── ☕ AuthResponse.java
-│   │   │   │               │   ├── ☕ AuthService.java
-│   │   │   │               │   ├── ☕ LoginRequest.java
-│   │   │   │               │   └── ☕ RegisterRequest.java
-│   │   │   │               ├── 📁 Config/
-│   │   │   │               │   ├── ☕ ApplicationConfig.java
-│   │   │   │               │   └── ☕ SecurityConfig.java
-│   │   │   │               ├── 📁 Demo/
-│   │   │   │               │   └── ☕ DemoController.java
-│   │   │   │               ├── 📁 Jwt/
-│   │   │   │               │   ├── ☕ JwtAuthenticationFilter.java
-│   │   │   │               │   └── ☕ JwtService.java
-│   │   │   │               ├── 📁 User/
-│   │   │   │               │   ├── ☕ Role.java
-│   │   │   │               │   ├── ☕ User.java
-│   │   │   │               │   └── ☕ UserRepository.java
-=======
 │   │   │   │               ├── 📁 Config/
 │   │   │   │               │   ├── ☕ ApplicationConfig.java
 │   │   │   │               │   └── ☕ SecurityConfig.java
@@ -167,7 +147,6 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 │   │   │   │               │   ├── ☕ IAuthService.java
 │   │   │   │               │   ├── ☕ IJwtService.java
 │   │   │   │               │   └── ☕ JwtService.java
->>>>>>> Stashed changes
 │   │   │   │               └── ☕ DemoJwtApplication.java
 │   │   │   └── 📁 resources/
 │   │   │       └── ⚙️ application.yml
@@ -254,6 +233,6 @@ Para evitar problemas de dependencias y asegurar el correcto funcionamiento del 
 
 1. **Config Server** (`microservice-configserver`)
 2. **Eureka Server** (`microservice-eureka`)
-3. **Student Service** (`microservice-student`)
-4. **Course Service** (`microservice-course`)
-5. **Gateway** (`microservice-gateway`)
+3. **Gateway** (`microservice-gateway`)
+4. **Student Service** (`microservice-student`)
+5. **Course Service** (`microservice-course`)
