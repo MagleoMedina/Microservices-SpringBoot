@@ -1,5 +1,6 @@
 package com.irojas.demojwt.Config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -18,8 +19,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final JwtAuthenticationFilter jwtAuthenticationFilter;
-    private final AuthenticationProvider authProvider;
+    @Autowired
+    private  JwtAuthenticationFilter jwtAuthenticationFilter;
+    @Autowired
+    private  AuthenticationProvider authProvider;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
@@ -27,11 +30,11 @@ public class SecurityConfig {
         return http
             .csrf(csrf -> 
                 csrf
-                .disable())
+                .disable())//enable en caso de trabajar con formularios
             .authorizeHttpRequests(authRequest ->
               authRequest
-                .requestMatchers("/auth/**").permitAll()
-                .anyRequest().authenticated()
+                .requestMatchers("/auth/**").permitAll() //permite solo estas rutas de acceso publico sin 
+                .anyRequest().authenticated()            //necesidad de autenticacion
                 )
             .sessionManagement(sessionManager->
                 sessionManager 

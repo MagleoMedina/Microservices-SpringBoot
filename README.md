@@ -127,6 +127,7 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 │   │   │   │   └── 📁 com/
 │   │   │   │       └── 📁 irojas/
 │   │   │   │           └── 📁 demojwt/
+<<<<<<< Updated upstream
 │   │   │   │               ├── 📁 Auth/
 │   │   │   │               │   ├── ☕ AuthController.java
 │   │   │   │               │   ├── ☕ AuthResponse.java
@@ -145,6 +146,28 @@ El objetivo de este proyecto es mostrar cómo construir y desplegar microservici
 │   │   │   │               │   ├── ☕ Role.java
 │   │   │   │               │   ├── ☕ User.java
 │   │   │   │               │   └── ☕ UserRepository.java
+=======
+│   │   │   │               ├── 📁 Config/
+│   │   │   │               │   ├── ☕ ApplicationConfig.java
+│   │   │   │               │   └── ☕ SecurityConfig.java
+│   │   │   │               ├── 📁 Jwt/
+│   │   │   │               │   └── ☕ JwtAuthenticationFilter.java
+│   │   │   │               ├── 📁 controllers/
+│   │   │   │               │   └── ☕ AuthController.java
+│   │   │   │               ├── 📁 models/
+│   │   │   │               │   ├── ☕ AuthResponse.java
+│   │   │   │               │   ├── ☕ LoginRequest.java
+│   │   │   │               │   ├── ☕ RegisterRequest.java
+│   │   │   │               │   ├── ☕ Role.java
+│   │   │   │               │   └── ☕ User.java
+│   │   │   │               ├── 📁 repository/
+│   │   │   │               │   └── ☕ UserRepository.java
+│   │   │   │               ├── 📁 services/
+│   │   │   │               │   ├── ☕ AuthService.java
+│   │   │   │               │   ├── ☕ IAuthService.java
+│   │   │   │               │   ├── ☕ IJwtService.java
+│   │   │   │               │   └── ☕ JwtService.java
+>>>>>>> Stashed changes
 │   │   │   │               └── ☕ DemoJwtApplication.java
 │   │   │   └── 📁 resources/
 │   │   │       └── ⚙️ application.yml
